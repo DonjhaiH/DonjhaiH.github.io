@@ -21,14 +21,14 @@ repository               : "DonjhaiH/DonjhaiH.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  avatar           : "Facetune_16-09-2022-10-41-57.jpeg"
+  name             : "Data Scientist"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "Hi my names is Donjhai!"
+  location         : "San Francisco/Bay Area"
+  employer         : "Peralta Colleges"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "donjhaih@outlook.com" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
