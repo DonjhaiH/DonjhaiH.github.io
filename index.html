@@ -3,151 +3,169 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Donjhai Holland | Data Analyst & Data Scientist</title>
-<meta name="description" content="Donjhai Holland, data analyst and data scientist in the Bay Area. Business background, statistics training, and hands-on work building data pipelines, apps and reporting.">
-<meta property="og:title" content="Donjhai Holland | Data Analyst & Data Scientist">
-<meta property="og:description" content="Business-minded data analyst and data scientist in the Bay Area.">
-<meta property="og:image" content="https://donjhaih.github.io/images/donjhai.jpg">
+<title>Donjhai Holland | Data &amp; Business Analyst</title>
+<meta name="description" content="Donjhai (DJ) Holland, data and business analyst in the Bay Area. Business degree, UC Berkeley statistics training, and hands-on work turning operational data into reporting and decisions.">
+<meta property="og:title" content="Donjhai Holland | Data &amp; Business Analyst">
+<meta property="og:description" content="Business-minded data and business analyst in the Bay Area.">
+<meta property="og:image" content="https://donjhaih.github.io/images/donjhai-cutout.png">
 <link rel="icon" href="images/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --blue:#003262;       /* Berkeley Blue */
-    --blue-2:#0b3f73;
-    --gold:#FDB515;       /* California Gold */
-    --medal:#C4820E;      /* darker gold for text on light backgrounds */
-    --rock:#3B7EA1;       /* Founders Rock */
-    --ink:#0f1f33;
-    --slate:#46566b;
-    --mist:#eef3f8;
-    --line:#dbe3ec;
+    --cream:#fbf8f2;
     --paper:#ffffff;
+    --ink:#0f2340;
+    --blue:#003262;        /* Berkeley Blue */
+    --gold:#fdb515;        /* California Gold */
+    --gold-soft:#fff0c7;
+    --medal:#b9770c;       /* gold that reads on light backgrounds */
+    --sky:#e6f0fb;
+    --sky-2:#c9ddf5;
+    --peach:#ffe3d3;
+    --muted:#566377;
+    --line:#e9e2d5;
+    --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+    --body:"Instrument Sans",ui-sans-serif,system-ui,sans-serif;
     --max:1120px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+  body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
   a{color:inherit}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
-  .serif{font-family:"DM Serif Display",Georgia,serif;font-weight:400}
-  .todo{background:#fff1c7;outline:1px dashed var(--medal);padding:0 3px;border-radius:3px;color:var(--ink)}
-  .spark{position:absolute;width:var(--s,40px);height:var(--s,40px);fill:var(--gold);pointer-events:none}
+  .spark{position:absolute;width:var(--s,36px);height:var(--s,36px);fill:var(--c,var(--gold));pointer-events:none}
+  h1,h2,h3,h4{font-family:var(--display);letter-spacing:-.02em}
+  .hl{position:relative;white-space:nowrap;z-index:0}
+  .hl::after{content:"";position:absolute;left:-4px;right:-4px;bottom:.08em;height:.38em;background:var(--gold);opacity:.55;border-radius:6px;z-index:-1;transform:rotate(-1.2deg)}
 
   /* nav */
-  header{position:absolute;top:0;left:0;right:0;z-index:5}
-  nav{display:flex;justify-content:space-between;align-items:center;height:84px}
-  .mono{font-family:"DM Serif Display",serif;font-size:26px;text-decoration:none;letter-spacing:.02em;color:#fff}
-  .mono span{color:var(--gold)}
-  nav ul{display:flex;gap:34px;list-style:none}
-  nav ul a{text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#c9d6e6}
-  nav ul a:hover{color:var(--gold)}
+  header{position:sticky;top:0;z-index:20;background:rgba(251,248,242,.85);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+  nav{display:flex;justify-content:space-between;align-items:center;height:72px}
+  .mono{font-family:var(--display);font-weight:800;font-size:22px;text-decoration:none;color:var(--blue);display:flex;align-items:center;gap:8px}
+  .mono b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--blue);font-size:15px}
+  nav ul{display:flex;gap:6px;list-style:none}
+  nav ul a{text-decoration:none;font-size:15px;font-weight:600;color:var(--ink);padding:8px 14px;border-radius:999px;transition:background .2s}
+  nav ul a:hover{background:var(--sky)}
+
+  /* buttons */
+  .btns{display:flex;flex-wrap:wrap;gap:14px}
+  .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:15px;font-weight:700;padding:14px 24px;border-radius:999px;border:2px solid var(--blue);transition:transform .15s,box-shadow .15s}
+  .btn.dark{background:var(--blue);color:#fff;box-shadow:4px 4px 0 var(--gold)}
+  .btn.line{background:var(--paper);color:var(--blue)}
+  .btn:hover{transform:translate(-2px,-2px)}
+  .btn.dark:hover{box-shadow:6px 6px 0 var(--gold)}
+  .btn.line:hover{box-shadow:4px 4px 0 var(--sky-2)}
 
   /* hero */
-  .hero{background:radial-gradient(1200px 600px at 78% 70%,#0d4a86 0%,var(--blue) 60%);overflow:hidden;position:relative;color:#fff}
-  .hero .wrap{display:grid;grid-template-columns:1fr;align-items:center;min-height:min(78vh,700px);position:relative}
-  .hero-text{padding:150px 0 110px;align-self:center;position:relative;z-index:2}
-  .kicker{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;display:flex;align-items:center;gap:14px}
-  .kicker::before{content:"";width:40px;height:2px;background:var(--gold)}
-  .hero h1{font-size:clamp(54px,7.4vw,104px);line-height:.95;letter-spacing:-.015em;margin-bottom:28px}
-  .hero h1 i{color:var(--gold)}
-  .hero p{font-size:19px;color:#d3deeb;max-width:29em;margin-bottom:38px}
-  .btns{display:flex;flex-wrap:wrap;gap:14px}
-  .btn{display:inline-block;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:16px 26px;border-radius:999px;border:1.5px solid var(--blue);transition:all .2s}
-  .btn.dark{background:var(--blue);color:#fff}
-  .btn.dark:hover{background:var(--gold);border-color:var(--gold);color:var(--blue)}
-  .btn.line{color:var(--blue)}
-  .btn.line:hover{background:var(--blue);color:#fff}
-  .hero .btn.dark{background:var(--gold);border-color:var(--gold);color:var(--blue)}
-  .hero .btn.dark:hover{background:#fff;border-color:#fff}
-  .hero .btn.line{color:#fff;border-color:rgba(255,255,255,.55)}
-  .hero .btn.line:hover{background:#fff;color:var(--blue)}
+  .hero{position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:var(--sky);left:-180px;top:-140px;z-index:-1}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;min-height:min(86vh,760px);position:relative}
+  .hello{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:15px;background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:7px 16px 7px 8px;margin-bottom:24px}
+  .hello .dot{width:24px;height:24px;border-radius:50%;background:#2fb56a;box-shadow:0 0 0 5px #d7f3e3}
+  .hero h1{font-size:clamp(52px,7vw,96px);line-height:.98;font-weight:800;color:var(--blue);margin-bottom:22px}
+  .hero h1 .sub{display:block;font-size:.42em;font-weight:700;color:var(--medal);letter-spacing:0;margin-bottom:6px}
+  .hero p.lede{font-size:19px;color:var(--muted);max-width:30em;margin-bottom:34px}
+  .photo{position:relative;justify-self:center;width:min(440px,100%);aspect-ratio:1/1.12;display:flex;align-items:flex-end;justify-content:center}
+  .photo .disc{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:100%;aspect-ratio:1;border-radius:50%;background:var(--gold)}
+  .photo .disc::after{content:"";position:absolute;inset:-14px;border-radius:50%;border:2px dashed var(--blue);opacity:.25}
+  .photo .clip{position:absolute;inset:0;border-radius:0 0 50% 50%/0 0 44% 44%;overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+  .photo picture{display:flex;height:100%;justify-content:center}
+  .photo img{position:relative;height:100%;width:auto;max-width:none;display:block}
+  .hero .wrap>*{min-width:0}
+  .sticker{position:absolute;background:var(--paper);border:1.5px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px;font-weight:600;box-shadow:0 10px 24px -14px rgba(15,35,64,.35);white-space:nowrap;z-index:3}
+  .sticker small{display:block;font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+  .s1{left:-6%;top:16%;transform:rotate(-4deg)}
+  .s2{right:-8%;top:44%;transform:rotate(3deg)}
+  .s3{left:2%;bottom:6%;transform:rotate(-2deg);background:var(--blue);color:#fff;border-color:var(--blue)}
+  .s3 small{color:var(--gold)}
 
   /* strip */
-  .strip{background:var(--gold);color:var(--blue)}
-  .strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:28px;padding-bottom:28px}
-  .strip div{font-size:14.5px;font-weight:500}
-  .strip b{display:block;font-family:"DM Serif Display",serif;font-weight:400;font-size:23px;margin-bottom:2px}
+  .strip{padding:0 0 10px}
+  .strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .strip .wrap>div{background:var(--paper);border:1.5px solid var(--line);border-radius:18px;padding:20px 22px;font-size:15px;color:var(--muted)}
+  .strip .wrap>div:nth-child(1){background:var(--gold-soft);border-color:#f6dc93}
+  .strip .wrap>div:nth-child(2){background:var(--sky);border-color:var(--sky-2)}
+  .strip .wrap>div:nth-child(3){background:var(--peach);border-color:#f8c9ae}
+  .strip b{display:block;font-family:var(--display);font-weight:700;font-size:22px;color:var(--blue);margin-bottom:2px}
 
   /* sections */
-  section{padding:110px 0;position:relative}
-  .label{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--medal);margin-bottom:18px}
-  h2{font-family:"DM Serif Display",serif;font-weight:400;font-size:clamp(38px,4.6vw,56px);line-height:1.05;margin-bottom:48px;color:var(--blue)}
-  h2 i{color:var(--rock)}
-
-  .about{display:grid;grid-template-columns:1fr 1.2fr;gap:72px;align-items:start}
+  section{padding:100px 0;position:relative}
+  .label{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);background:var(--sky);border-radius:999px;padding:6px 14px;margin-bottom:18px}
+  h2{font-weight:800;font-size:clamp(36px,4.6vw,56px);line-height:1.05;margin-bottom:44px;color:var(--blue)}
+  .about{display:grid;grid-template-columns:1fr 1.25fr;gap:64px;align-items:start}
   .about h2{margin-bottom:0}
-  .about p{color:var(--slate);margin-bottom:20px;font-size:18px}
-  .about p:first-child::first-letter{font-family:"DM Serif Display",serif;font-size:62px;float:left;line-height:.9;padding:6px 10px 0 0;color:var(--medal)}
+  .about p{color:var(--muted);margin-bottom:18px;font-size:18px}
 
-  /* work */
-  #work{background:var(--mist)}
-  .project{display:grid;grid-template-columns:90px 1fr 220px;gap:36px;padding:38px 0;border-top:1px solid var(--line);align-items:start}
-  .project:last-of-type{border-bottom:1px solid var(--line)}
-  .project .n{font-family:"DM Serif Display",serif;font-size:44px;color:var(--medal);line-height:1}
-  .project h3{font-family:"DM Serif Display",serif;font-weight:400;font-size:30px;line-height:1.15;margin-bottom:10px;color:var(--blue)}
-  .project p{color:var(--slate);max-width:36em}
-  .project .side{font-size:14px;color:var(--slate)}
-  .project .side .ctx{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--medal);margin-bottom:10px}
-  .project .side .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
-  .project .side span.t{background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:12.5px;font-weight:600;color:var(--blue)}
-  .project .side a{display:block;font-weight:700;text-decoration:none;letter-spacing:.06em;text-transform:uppercase;font-size:13px;margin-bottom:6px;color:var(--blue)}
-  .project .side a:hover{color:var(--rock)}
-  .note{margin-top:26px;font-size:14px;color:var(--slate)}
+  /* projects */
+  #work{background:var(--paper);border-radius:40px;margin:0 16px}
+  .project{display:grid;grid-template-columns:64px 1fr 230px;gap:28px;padding:28px;border:1.5px solid var(--line);border-radius:22px;background:var(--cream);margin-bottom:16px;align-items:start;transition:transform .15s,box-shadow .15s,border-color .15s}
+  .project:hover{transform:translateY(-3px);box-shadow:0 18px 30px -22px rgba(15,35,64,.45);border-color:var(--sky-2)}
+  .project .n{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:18px;background:var(--gold);color:var(--blue)}
+  .project:nth-of-type(3n+2) .n{background:var(--sky-2)}
+  .project:nth-of-type(3n) .n{background:var(--peach)}
+  .project h3{font-size:24px;font-weight:700;line-height:1.2;margin-bottom:8px;color:var(--blue)}
+  .project p{color:var(--muted);font-size:16px}
+  .side{font-size:14px}
+  .side .ctx{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--medal);margin-bottom:10px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+  .t{background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:3px 11px;font-size:12.5px;font-weight:600;color:var(--blue)}
+  .side a{display:inline-block;font-weight:700;text-decoration:none;font-size:14px;color:var(--blue);border-bottom:2px solid var(--gold)}
+  .side a:hover{color:var(--medal)}
+  .note{margin-top:22px;font-size:14px;color:var(--muted)}
+  .note a{color:var(--blue);font-weight:600}
 
   /* experience */
-  .exp{display:grid;grid-template-columns:1fr 2fr;gap:72px}
-  .role{padding-bottom:34px;margin-bottom:34px;border-bottom:1px solid var(--line)}
-  .role:last-child{border-bottom:0;margin-bottom:0}
-  .role .when{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--medal)}
-  .role h3{font-family:"DM Serif Display",serif;font-weight:400;font-size:27px;margin:4px 0 2px;color:var(--blue)}
-  .role .org{font-weight:600;color:var(--rock);margin-bottom:10px}
-  .role ul{padding-left:18px;color:var(--slate)}
-  .role li{margin-bottom:5px}
-  .edu{background:var(--blue);color:#fff;border-radius:18px;padding:32px;position:sticky;top:30px;border-top:5px solid var(--gold)}
-  .edu h4{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
-  .edu .deg{margin-bottom:20px}
-  .edu .deg b{display:block;font-family:"DM Serif Display",serif;font-weight:400;font-size:21px;line-height:1.25}
-  .edu .deg span{font-size:14.5px;color:#c9d6e6}
+  .exp{display:grid;grid-template-columns:1fr 2fr;gap:56px}
+  .edu{background:var(--sky);border-radius:24px;padding:30px;position:sticky;top:96px}
+  .edu h4{font-family:var(--body);font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--medal);margin-bottom:14px}
+  .edu .deg{margin-bottom:18px}
+  .edu .deg b{display:block;font-family:var(--display);font-weight:700;font-size:19px;line-height:1.25;color:var(--blue)}
+  .edu .deg span{font-size:14.5px;color:var(--muted)}
+  .role{background:var(--paper);border:1.5px solid var(--line);border-radius:22px;padding:26px 28px;margin-bottom:16px}
+  .role .when{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);background:var(--gold-soft);border-radius:999px;padding:4px 12px}
+  .role h3{font-size:23px;font-weight:700;margin:10px 0 2px;color:var(--blue)}
+  .role .org{font-weight:600;color:var(--medal);margin-bottom:12px}
+  .role ul{padding-left:20px;color:var(--muted)}
+  .role li{margin-bottom:6px}
+  .role li::marker{color:var(--gold)}
 
   /* skills */
-  #skills{background:var(--blue);color:#d3deeb;overflow:hidden}
-  #skills h2{color:#fff}
-  #skills h2 i{color:var(--gold)}
-  #skills .label{color:var(--gold)}
-  .skillgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
-  .skillgrid h4{font-family:"DM Serif Display",serif;font-weight:400;font-size:24px;color:#fff;margin-bottom:14px;padding-bottom:12px;border-bottom:2px solid var(--gold)}
-  .skillgrid ul{list-style:none;display:grid;gap:8px;font-size:16px}
+  #skills{background:var(--sky);border-radius:40px;margin:0 16px}
+  #skills .label{background:var(--paper)}
+  .skillgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .skillgrid>div{background:var(--paper);border-radius:22px;padding:24px}
+  .skillgrid h4{font-size:19px;font-weight:700;color:var(--blue);margin-bottom:14px}
+  .skillgrid ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .skillgrid li{background:var(--cream);border:1.5px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:500}
 
   /* contact */
-  .contact .wrap{display:grid;grid-template-columns:auto 1fr;gap:64px;align-items:center}
-  .contact h2{font-size:clamp(46px,6vw,80px);margin-bottom:20px}
-  .contact p{color:var(--slate);max-width:32em;margin:0 0 36px;font-size:18px}
-  .avatar{position:relative;width:240px;height:240px;flex:none}
-  .avatar::before{content:"";position:absolute;inset:-12px;border:2px solid var(--gold);border-radius:50%}
-  .avatar picture{display:block;width:100%;height:100%;border-radius:50%;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,50,98,.55)}
-  .avatar img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block;transform:scale(1.45);transform-origin:50% 22%}
-  footer{background:var(--blue);padding:26px 0;font-size:13.5px;color:#c9d6e6;border-top:4px solid var(--gold)}
+  .contact-card{background:var(--gold-soft);border:2px solid var(--blue);border-radius:32px;padding:64px 48px;text-align:center;box-shadow:10px 10px 0 var(--blue);position:relative;overflow:hidden}
+  .contact-card .label{background:var(--paper)}
+  .contact h2{font-size:clamp(44px,6vw,76px);margin-bottom:16px}
+  .contact p{color:var(--muted);max-width:32em;margin:0 auto 32px;font-size:18px}
+  .contact .btns{justify-content:center}
+  footer{padding:28px 0 40px;font-size:14px;color:var(--muted)}
   footer .wrap{display:flex;justify-content:space-between}
 
   @media (max-width:900px){
     nav ul{display:none}
-    .hero .wrap{grid-template-columns:1fr;min-height:0}
-    .hero-text{padding:120px 0 70px}
-    .strip .wrap{grid-template-columns:1fr;gap:14px}
-    section{padding:80px 0}
-    .about,.exp{grid-template-columns:1fr;gap:36px}
+    .hero .wrap{grid-template-columns:1fr;min-height:0;padding-top:40px;padding-bottom:30px}
+    .photo{width:min(330px,88%);margin-top:10px}
+    .s1,.s2{display:none}
+    .s3{left:50%;bottom:-4%;transform:translateX(-50%) rotate(-2deg)}
+    .strip .wrap{grid-template-columns:1fr}
+    section{padding:72px 0}
+    #work,#skills{margin:0;border-radius:28px}
+    .about,.exp{grid-template-columns:1fr;gap:32px}
     .edu{position:static}
-    .project{grid-template-columns:1fr;gap:12px}
-    .skillgrid{grid-template-columns:1fr 1fr;gap:28px}
+    .project{grid-template-columns:1fr;gap:14px;padding:22px}
+    .skillgrid{grid-template-columns:1fr}
+    .contact-card{padding:44px 22px;box-shadow:6px 6px 0 var(--blue)}
     footer .wrap{flex-direction:column;gap:6px;text-align:center}
-    .contact .wrap{grid-template-columns:1fr;gap:36px;justify-items:center;text-align:center}
-    .contact p{margin:0 auto 36px}
-    .contact .btns{justify-content:center}
-    .avatar{width:180px;height:180px}
-    .spark.hide-m{display:none}
   }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
@@ -155,7 +173,7 @@
 <header>
   <div class="wrap">
     <nav>
-      <a class="mono" href="#top">DH<span>.</span></a>
+      <a class="mono" href="#top"><b>DH</b>Donjhai Holland</a>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#work">Work</a></li>
@@ -168,16 +186,23 @@
 
 <div class="hero" id="top">
   <div class="wrap">
-    <svg class="spark hide-m" style="--s:56px;top:34%;right:6%" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C53 30 70 47 100 50C70 53 53 70 50 100C47 70 30 53 0 50C30 47 47 30 50 0Z"/></svg>
-    <svg class="spark hide-m" style="--s:28px;top:62%;right:16%" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C53 30 70 47 100 50C70 53 53 70 50 100C47 70 30 53 0 50C30 47 47 30 50 0Z"/></svg>
+    <svg class="spark" style="--s:30px;top:14%;left:47%" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C53 30 70 47 100 50C70 53 53 70 50 100C47 70 30 53 0 50C30 47 47 30 50 0Z"/></svg>
+    <svg class="spark" style="--s:18px;--c:var(--blue);bottom:16%;left:52%" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C53 30 70 47 100 50C70 53 53 70 50 100C47 70 30 53 0 50C30 47 47 30 50 0Z"/></svg>
     <div class="hero-text">
-      <div class="kicker">Data Analyst &amp; Data Scientist</div>
-      <h1 class="serif">Donjhai<br><i>Holland</i></h1>
-      <p>I turn messy operational data into clear reporting and practical tools, with a business background that keeps the work focused on the decision behind it.</p>
+      <div class="hello"><span class="dot"></span>Open to full-time roles in 2027</div>
+      <h1><span class="sub">Hi, I'm DJ.</span>Donjhai <span class="hl">Holland</span></h1>
+      <p class="lede">A data and business analyst who turns messy operational data into clear reporting and decisions, with a business degree and UC Berkeley statistics training behind it.</p>
       <div class="btns">
-        <a class="btn dark" href="#work">View my work</a>
-        <a class="btn line" href="files/Donjhai_Holland_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+        <a class="btn dark" href="#work">See my work</a>
+        <a class="btn line" href="files/Donjhai_Holland_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
       </div>
+    </div>
+    <div class="photo">
+      <div class="disc"></div>
+      <div class="clip"><picture><source srcset="images/donjhai-cutout.webp" type="image/webp"><img src="images/donjhai-cutout.png" alt="Donjhai Holland" width="677" height="900"></picture></div>
+      <div class="sticker s1"><small>Now</small>Data intern at PG&amp;E ⚡</div>
+      <div class="sticker s2"><small>Studying</small>M.A. Stats, UC Berkeley</div>
+      <div class="sticker s3"><small>Toolkit</small>Power BI · SQL · Python</div>
     </div>
   </div>
 </div>
@@ -195,7 +220,7 @@
     <div class="wrap about">
       <div>
         <div class="label">About</div>
-        <h2>Business sense,<br><i>statistical</i> rigor.</h2>
+        <h2>Business sense,<br><span class="hl">statistical</span> rigor.</h2>
       </div>
       <div>
         <p>I started in business, earning a B.S. in Business Administration from San Francisco State, then built the math and statistics to go with it: an Associate in Mathematics from Laney College and an M.A. in Statistics and Data Science at UC Berkeley, finishing December 2026.</p>
@@ -230,7 +255,7 @@
         </div>
         <div class="side">
           <div class="ctx">PG&amp;E · 2026</div>
-          <div class="tags"><span class="t">SQL</span><span class="t">Excel</span><span class="t">Power BI</span></div>
+          <div class="tags"><span class="t">Gap analysis</span><span class="t">Budget planning</span><span class="t">Leadership reporting</span></div>
         </div>
       </article>
 
@@ -249,6 +274,18 @@
       <article class="project">
         <div class="n">04</div>
         <div>
+          <h3>Salon booking database</h3>
+          <p>Designed a 10-table MySQL database for a salon booking app, covering clients, stylists, availability, appointments, payments, discount codes, reviews and product inventory. Wrote the SQL behind each step of the app, from checking a stylist's open time slots to a five-table join that confirms appointments and a payment query that applies discount codes and tips.</p>
+        </div>
+        <div class="side">
+          <div class="ctx">Laney College · CIS 98 · 2024</div>
+          <div class="tags"><span class="t">MySQL</span><span class="t">Database design</span><span class="t">ER diagram</span></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="n">05</div>
+        <div>
           <h3>Product pricing in the Sephora marketplace</h3>
           <p>Built and compared six regression models on 5,000+ products to find what drives price. Active ingredients carried the largest premiums (retinol +42%), and Sephora exclusives were priced 18% lower.</p>
         </div>
@@ -260,7 +297,7 @@
       </article>
 
       <article class="project">
-        <div class="n">05</div>
+        <div class="n">06</div>
         <div>
           <h3>Predicting brain activity from language</h3>
           <p>Built encoding models that predict fMRI activity from podcast transcripts, aligning about 25 GB of text and fMRI data per subject on HPC clusters. Led the SHAP and LIME analysis showing dialogue words like "said" drove predicted activity.</p>
@@ -273,7 +310,7 @@
       </article>
 
       <article class="project">
-        <div class="n">06</div>
+        <div class="n">07</div>
         <div>
           <h3>Pediatric TBI risk modeling</h3>
           <p>Compared three classifiers to predict rare outcomes (under 2% of cases) across 43,000+ records, and identified a 14-percentage-point racial gap in CT imaging that persisted after controlling for clinical severity.</p>
@@ -286,7 +323,7 @@
       </article>
 
       <article class="project">
-        <div class="n">07</div>
+        <div class="n">08</div>
         <div>
           <h3>Satellite cloud detection in the Arctic</h3>
           <p>Classified satellite pixels as cloud or ice with gradient boosting and autoencoder features (ROC-AUC 0.94–0.996 on unseen images). Led the exploratory analysis and engineered the NDAI × SD feature, the strongest single predictor.</p>
@@ -299,7 +336,7 @@
       </article>
 
       <article class="project">
-        <div class="n">08</div>
+        <div class="n">09</div>
         <div>
           <h3>Poverty and diabetes across U.S. states</h3>
           <p>Regression analysis of CDC Chronic Disease Indicators: each 1-point rise in state poverty prevalence was associated with a 0.33-point rise in diabetes prevalence (p &lt; 0.001), with choropleth maps of both.</p>
@@ -318,7 +355,7 @@
   <section id="experience">
     <div class="wrap">
       <div class="label">Experience</div>
-      <h2>Where I've <i>worked</i></h2>
+      <h2>Where I've <span class="hl">worked</span></h2>
       <div class="exp">
         <aside>
           <div class="edu">
@@ -382,10 +419,9 @@
   </section>
 
   <section id="skills">
-    <svg class="spark hide-m" style="--s:54px;top:70px;right:8%" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C53 30 70 47 100 50C70 53 53 70 50 100C47 70 30 53 0 50C30 47 47 30 50 0Z"/></svg>
     <div class="wrap">
       <div class="label">Toolkit</div>
-      <h2>What I <i>work</i> with</h2>
+      <h2>What I <span class="hl">work</span> with</h2>
       <div class="skillgrid">
         <div><h4>Programming &amp; Data</h4><ul><li>Excel (pivot tables, XLOOKUP)</li><li>Python (pandas, NumPy, scikit-learn)</li><li>SQL</li><li>R</li><li>SAP</li></ul></div>
         <div><h4>Reporting &amp; Analytics</h4><ul><li>Power BI</li><li>Tableau</li><li>Excel dashboards</li><li>Data cleaning &amp; validation</li><li>Spend analysis</li><li>Process improvement</li></ul></div>
@@ -397,11 +433,10 @@
 
   <section id="contact" class="contact">
     <div class="wrap">
-      <div class="avatar"><picture><source srcset="images/donjhai.webp" type="image/webp"><img src="images/donjhai.jpg" alt="Donjhai Holland" width="800" height="1000" loading="lazy"></picture></div>
-      <div>
+      <div class="contact-card">
       <div class="label">Contact</div>
-      <h2>Let's <i>connect.</i></h2>
-      <p>I'm looking for full-time data analyst and data science roles in the Bay Area or remote. Email is the fastest way to reach me.</p>
+      <h2>Let's <span class="hl">connect.</span></h2>
+      <p>I'm looking for full-time data and business analyst roles in the Bay Area or remote. Email is the fastest way to reach me.</p>
       <div class="btns">
         <a class="btn dark" href="mailto:donjhaih@outlook.com">Email me</a>
         <a class="btn line" href="https://www.linkedin.com/in/donjhai-holland/" target="_blank" rel="noopener">LinkedIn</a>
