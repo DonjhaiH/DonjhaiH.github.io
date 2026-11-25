@@ -46,7 +46,7 @@
 
   /* hero */
   .hero{background:radial-gradient(1200px 600px at 78% 70%,#0d4a86 0%,var(--blue) 60%);overflow:hidden;position:relative;color:#fff}
-  .hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;min-height:min(92vh,820px);position:relative}
+  .hero .wrap{display:grid;grid-template-columns:1fr;align-items:center;min-height:min(78vh,700px);position:relative}
   .hero-text{padding:150px 0 110px;align-self:center;position:relative;z-index:2}
   .kicker{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;display:flex;align-items:center;gap:14px}
   .kicker::before{content:"";width:40px;height:2px;background:var(--gold)}
@@ -63,10 +63,6 @@
   .hero .btn.dark:hover{background:#fff;border-color:#fff}
   .hero .btn.line{color:#fff;border-color:rgba(255,255,255,.55)}
   .hero .btn.line:hover{background:#fff;color:var(--blue)}
-  .hero-photo{align-self:center;display:flex;justify-content:center;position:relative;padding:120px 0 90px}
-  .hero-photo .frame{position:relative;width:100%;max-width:400px}
-  .hero-photo .frame::before{content:"";position:absolute;inset:22px -22px -22px 22px;border:2px solid var(--gold);border-radius:24px}
-  .hero-photo img{width:100%;height:auto;display:block;position:relative;border-radius:24px;box-shadow:0 40px 80px -30px rgba(0,0,0,.55)}
 
   /* strip */
   .strip{background:var(--gold);color:var(--blue)}
@@ -125,19 +121,20 @@
   .skillgrid ul{list-style:none;display:grid;gap:8px;font-size:16px}
 
   /* contact */
-  .contact{text-align:center}
+  .contact .wrap{display:grid;grid-template-columns:auto 1fr;gap:64px;align-items:center}
   .contact h2{font-size:clamp(46px,6vw,80px);margin-bottom:20px}
-  .contact p{color:var(--slate);max-width:32em;margin:0 auto 36px;font-size:18px}
-  .contact .btns{justify-content:center}
+  .contact p{color:var(--slate);max-width:32em;margin:0 0 36px;font-size:18px}
+  .avatar{position:relative;width:240px;height:240px;flex:none}
+  .avatar::before{content:"";position:absolute;inset:-12px;border:2px solid var(--gold);border-radius:50%}
+  .avatar picture{display:block;width:100%;height:100%;border-radius:50%;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,50,98,.55)}
+  .avatar img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block;transform:scale(1.45);transform-origin:50% 22%}
   footer{background:var(--blue);padding:26px 0;font-size:13.5px;color:#c9d6e6;border-top:4px solid var(--gold)}
   footer .wrap{display:flex;justify-content:space-between}
 
   @media (max-width:900px){
     nav ul{display:none}
     .hero .wrap{grid-template-columns:1fr;min-height:0}
-    .hero-text{padding:120px 0 10px}
-    .hero-photo{padding:20px 22px 70px}
-    .hero-photo .frame{max-width:300px}
+    .hero-text{padding:120px 0 70px}
     .strip .wrap{grid-template-columns:1fr;gap:14px}
     section{padding:80px 0}
     .about,.exp{grid-template-columns:1fr;gap:36px}
@@ -145,6 +142,10 @@
     .project{grid-template-columns:1fr;gap:12px}
     .skillgrid{grid-template-columns:1fr 1fr;gap:28px}
     footer .wrap{flex-direction:column;gap:6px;text-align:center}
+    .contact .wrap{grid-template-columns:1fr;gap:36px;justify-items:center;text-align:center}
+    .contact p{margin:0 auto 36px}
+    .contact .btns{justify-content:center}
+    .avatar{width:180px;height:180px}
     .spark.hide-m{display:none}
   }
 </style>
@@ -167,8 +168,8 @@
 
 <div class="hero" id="top">
   <div class="wrap">
-    <svg class="spark hide-m" style="--s:46px;top:118px;right:4%" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C53 30 70 47 100 50C70 53 53 70 50 100C47 70 30 53 0 50C30 47 47 30 50 0Z"/></svg>
-    <svg class="spark hide-m" style="--s:28px;top:46%;left:47%" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C53 30 70 47 100 50C70 53 53 70 50 100C47 70 30 53 0 50C30 47 47 30 50 0Z"/></svg>
+    <svg class="spark hide-m" style="--s:56px;top:34%;right:6%" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C53 30 70 47 100 50C70 53 53 70 50 100C47 70 30 53 0 50C30 47 47 30 50 0Z"/></svg>
+    <svg class="spark hide-m" style="--s:28px;top:62%;right:16%" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C53 30 70 47 100 50C70 53 53 70 50 100C47 70 30 53 0 50C30 47 47 30 50 0Z"/></svg>
     <div class="hero-text">
       <div class="kicker">Data Analyst &amp; Data Scientist</div>
       <h1 class="serif">Donjhai<br><i>Holland</i></h1>
@@ -177,9 +178,6 @@
         <a class="btn dark" href="#work">View my work</a>
         <a class="btn line" href="files/Donjhai_Holland_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
       </div>
-    </div>
-    <div class="hero-photo">
-      <div class="frame"><picture><source srcset="images/donjhai.webp" type="image/webp"><img src="images/donjhai.jpg" alt="Donjhai Holland" width="800" height="1000"></picture></div>
     </div>
   </div>
 </div>
@@ -399,13 +397,16 @@
 
   <section id="contact" class="contact">
     <div class="wrap">
+      <div class="avatar"><picture><source srcset="images/donjhai.webp" type="image/webp"><img src="images/donjhai.jpg" alt="Donjhai Holland" width="800" height="1000" loading="lazy"></picture></div>
+      <div>
       <div class="label">Contact</div>
-      <h2>Let's <i>work</i> together.</h2>
+      <h2>Let's <i>connect.</i></h2>
       <p>I'm looking for full-time data analyst and data science roles in the Bay Area or remote. Email is the fastest way to reach me.</p>
       <div class="btns">
         <a class="btn dark" href="mailto:donjhaih@outlook.com">Email me</a>
         <a class="btn line" href="https://www.linkedin.com/in/donjhai-holland/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn line" href="https://github.com/DonjhaiH" target="_blank" rel="noopener">GitHub</a>
+      </div>
       </div>
     </div>
   </section>
