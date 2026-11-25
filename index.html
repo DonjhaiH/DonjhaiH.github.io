@@ -98,6 +98,21 @@
   .about h2{margin-bottom:0}
   .about p{color:var(--muted);margin-bottom:18px;font-size:18px}
 
+  /* how I work */
+  .lead-q{font-size:19px;color:var(--muted);max-width:40em;margin:-24px 0 40px}
+  .lead-q b{color:var(--blue)}
+  .principles{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .pr{background:var(--paper);border:1.5px solid var(--line);border-radius:22px;padding:26px 28px;transition:transform .15s,box-shadow .15s}
+  .pr:hover{transform:translateY(-3px);box-shadow:0 18px 30px -22px rgba(15,35,64,.45)}
+  .pr .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-size:22px;margin-bottom:14px;background:var(--gold-soft)}
+  .pr:nth-child(2) .ic{background:var(--sky)} .pr:nth-child(3) .ic{background:var(--peach)} .pr:nth-child(4) .ic{background:#e2f4e8}
+  .pr h3{font-size:21px;font-weight:700;color:var(--blue);margin-bottom:6px}
+  .pr p{color:var(--muted);font-size:16px}
+  .why{margin-top:18px;background:var(--blue);color:#dbe6f3;border-radius:22px;padding:30px 32px;display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center;position:relative;overflow:hidden}
+  .why h3{font-size:26px;font-weight:800;color:#fff;line-height:1.1}
+  .why h3 span{color:var(--gold)}
+  .why p{font-size:17px}
+
   /* projects */
   #work{background:var(--paper);border-radius:40px;margin:0 16px}
   .project{display:grid;grid-template-columns:64px 1fr 230px;gap:28px;padding:28px;border:1.5px solid var(--line);border-radius:22px;background:var(--cream);margin-bottom:16px;align-items:start;transition:transform .15s,box-shadow .15s,border-color .15s}
@@ -159,6 +174,9 @@
     section{padding:72px 0}
     #work,#skills{margin:0;border-radius:28px}
     .about,.exp{grid-template-columns:1fr;gap:32px}
+    .principles{grid-template-columns:1fr}
+    .why{grid-template-columns:1fr;gap:10px;padding:26px 24px}
+    .lead-q{margin-top:-28px}
     .edu{position:static}
     .project{grid-template-columns:1fr;gap:14px;padding:22px}
     .skillgrid{grid-template-columns:1fr}
@@ -176,6 +194,7 @@
       <a class="mono" href="#top"><b>DH</b>Donjhai Holland</a>
       <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#how">How I work</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -226,6 +245,24 @@
         <p>I started in business, earning a B.S. in Business Administration from San Francisco State, then built the math and statistics to go with it: an Associate in Mathematics from Laney College and an M.A. in Statistics and Data Science at UC Berkeley, finishing December 2026.</p>
         <p>At PG&amp;E I work on substation operations data. I reconciled our SF6 gas sampling cylinder inventory with 8 teams and the chemistry lab, rebuilt the dataset behind a new utilization KPI, sized $4.2M in maintenance spend, and quantified a repair-kit gap for budget planning. Before that I coached 140 students a term at Laney College, using progress data to target support, analyzed asset data at Berkeley Lab's NERSC, and did biostatistics research at NYU.</p>
         <p>The part I care about most is the stretch between raw data and a decision: getting the data right, making the analysis easy to follow, and building tools people keep using after I hand them off.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="label">How I work</div>
+      <h2>Always asking how to be a <span class="hl">better analyst.</span></h2>
+      <p class="lead-q">That question shapes how I approach every task. Here's what it looks like in practice.</p>
+      <div class="principles">
+        <div class="pr"><div class="ic">⚙️</div><h3>Automate the repeat work</h3><p>When a task comes back every week, my first question is how to automate it. At PG&amp;E that turned an hour-long reporting workflow into one that runs in under a minute.</p></div>
+        <div class="pr"><div class="ic">📈</div><h3>Build it to scale</h3><p>Working with big data in grad school taught me to think about scale from the start. When I clean or process data, I build an end-to-end pipeline so the next run is reproducible, not a redo.</p></div>
+        <div class="pr"><div class="ic">🤝</div><h3>Make it usable for the next person</h3><p>Good analysis should outlast the person who wrote it. I built a Streamlit app so the analyst taking over my code can use it without having to read it.</p></div>
+        <div class="pr"><div class="ic">💡</div><h3>Learn the business first</h3><p>My statistics degree gave me the technical tools. My business degree and time in utility operations taught me where to point them. I'm always learning how the business runs and what's changing in the industry.</p></div>
+      </div>
+      <div class="why">
+        <h3>Why <span>utilities?</span></h3>
+        <p>Utilities were here before tech, and they're what make tech possible. I've always been drawn to engineering, and utility analytics is the closest I can get to that work as an analyst: helping the infrastructure that keeps everything else running work better.</p>
       </div>
     </div>
   </section>
